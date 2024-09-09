@@ -1,38 +1,8 @@
 {
-  "name": "idofactory",
+  "name": "IDO Factory",
   "version": "1.2.2",
   "private": true,
   "homepage": ".",
-  "scripts": {
-    "start": "npm run config | react-scripts start",
-    "build": "npm run config | react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "devchain": "node Truffle/scripts/devChain.js",
-    "config": "node src/optimize.js",
-    "connect": "moralis-admin-cli connect-local-devchain",
-    "watch:events": "moralis-admin-cli add-contract",
-    "deploy": "node Truffle/scripts/deployContract.js"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@emotion/react": "^11.6.0",
@@ -79,5 +49,34 @@
     "web-vitals": "^1.0.1",
     "web3": "1.0.0-beta.55",
     "yarn": "^1.22.17"
+  },
+  "scripts": {
+    "start": "npm run config | react-scripts --openssl-legacy-provider start",
+    "build": "npm run config | react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "devchain": "node Truffle/scripts/devChain.js",
+    "config": "node src/optimize.js",
+    "connect": "moralis-admin-cli connect-local-devchain",
+    "watch:events": "moralis-admin-cli add-contract",
+    "deploy": "node Truffle/scripts/deployContract.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
